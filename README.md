@@ -1,6 +1,6 @@
-# ROSNeuro Blackman window
+# ROS-Neuro Blackman window
 
-This ROSNeuro filter plugin applies an Blackman window to the provided data.
+This ROS-Neuro filter plugin applies an Blackman window to the provided data.
 
 ## Algorithm:
 The filter applies the Blackman window to the data. The Blackman window is implemented as follows:
