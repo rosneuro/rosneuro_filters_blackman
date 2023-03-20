@@ -1,0 +1,18 @@
+<class_libraries>
+  <library path="lib/librosneuro_filters_blackman">
+    <class name="rosneuro_filters/BlackmanWindowDouble" type="rosneuro::Blackman<double>"
+        base_class_type="rosneuro::Filter<double>">
+      <description>Blackman filter with doubles</description>
+    </class>
+    
+    <class name="rosneuro_filters/BlackmanWindowFloat" type="rosneuro::Blackman<float>"
+        base_class_type="rosneuro::Filter<float>">
+      <description>Blackman filter with floats</description>
+    </class>
+    
+    <class name="rosneuro_filters/BlackmanFilterInt" type="rosneuro::Blackman<int>"
+        base_class_type="rosneuro::Filter<int>">
+      <description>Blackman filter with ints</description>
+    </class>
+  </library>
+ </class_libraries> 
