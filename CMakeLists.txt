@@ -73,6 +73,9 @@ install(TARGETS ${PROJECT_NAME}
 	LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 )
 
-install(FILES plugins_rosneuro_filters_blackman.xml
+install(DIRECTORY include/${PROJECT_NAME}/
+        DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION})
+
+	install(FILES plugins_rosneuro_filters_blackman.xml
 	DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
