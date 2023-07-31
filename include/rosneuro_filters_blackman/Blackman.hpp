@@ -2,12 +2,12 @@
 #define ROSNEURO_FILTERS_BLACKMAN_HPP
 
 #include <Eigen/Dense>
-#include <rosneuro_filters/Filter.hpp>
+#include <rosneuro_filters/Window.hpp>
   
 namespace rosneuro {
 
 template <typename T>
-class Blackman : public Filter<T> {
+class Blackman : public Window<T> {
 
 	public:
 		Blackman(void);
@@ -21,9 +21,7 @@ class Blackman : public Filter<T> {
 
 	private:
 		int nsamples_;
-		bool is_window_set_;
 		Eigen::Matrix<T, Eigen::Dynamic, 1> window_;
-		T wnorm_;
 		
 };
 
