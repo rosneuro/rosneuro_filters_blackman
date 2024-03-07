@@ -2,6 +2,7 @@
 #define ROSNEURO_FILTERS_BLACKMAN_HPP
 
 #include <Eigen/Dense>
+#include <gtest/gtest_prod.h>
 #include <rosneuro_filters/Filter.hpp>
   
 namespace rosneuro {
@@ -24,12 +25,16 @@ class Blackman : public Filter<T> {
 		bool is_window_set_;
 		Eigen::Matrix<T, Eigen::Dynamic, 1> window_;
 		T wnorm_;
-		
+
+        FRIEND_TEST(BlackmanTestSuite, Constructor);
+        FRIEND_TEST(BlackmanTestSuite, CreateWindowWithValidSamples);
+        FRIEND_TEST(BlackmanTestSuite, CreateWindowWithInvalidSamples);
+
 };
 
 template<typename T>
 Blackman<T>::Blackman(void) {
-	this->name_ 	     = "blackman";
+	this->name_ 	     = "blackman_filter";
 	this->is_window_set_ = false;
 }
 
