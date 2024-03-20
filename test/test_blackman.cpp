@@ -27,6 +27,13 @@ TEST_F(BlackmanTestSuite, ApplyWithValidWindow) {
 
     ASSERT_EQ(result.rows(), inputMatrix.rows());
     ASSERT_EQ(result.cols(), inputMatrix.cols());
+
+    DynamicMatrix<double> expected(3, 3);
+    expected << 0,            0,            0,
+                0,  3.24249e-86, 1.47286e-319,
+                0,            0,            0;
+
+    ASSERT_TRUE(result.isApprox(expected, 0.01));
 }
 
 TEST_F(BlackmanTestSuite, ApplyWithoutWindow) {
