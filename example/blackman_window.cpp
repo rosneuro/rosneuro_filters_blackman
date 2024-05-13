@@ -16,7 +16,7 @@ int main(int argc, char** argv) {
 	}
 	
 	const std::string fileinput = datapath + "/test/rawdata.csv";
-	const std::string fileout   = datapath + "/test/blackman_window.csv";
+	const std::string fileout   = datapath + "/test/expected.csv";
 	
 	// Load input data
 	rosneuro::DynamicMatrix<double> input = readCSV<double>(fileinput);
